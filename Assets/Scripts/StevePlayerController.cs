@@ -37,8 +37,8 @@ public class StevePlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var x = Input.GetAxis("Oculus_GearVR_LThumbstickX");
-        var y = Input.GetAxis("Oculus_GearVR_LThumbstickY");
+        var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * 0.01f;
+        var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * 0.01f;
         transform.Translate(x, 0, y);
 
         Grab();
