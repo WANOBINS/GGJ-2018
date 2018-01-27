@@ -43,6 +43,8 @@ namespace Assets.Scripts.Util
                     throw new Exception("There must be only " + type.Name + " in the scene at any time");
                 }
             }
+
+            Destroy(gameObject);
         }
 
         #endregion Unity Functions
