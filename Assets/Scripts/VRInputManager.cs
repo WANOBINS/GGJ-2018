@@ -22,8 +22,8 @@ public class VRInputManager : MonoBehaviour
     protected SteamVR_TrackedController LController;
     protected SteamVR_TrackedController RController;
 
-    protected SteamVR_Controller.Device LDevice;
-    protected SteamVR_Controller.Device RDevice;
+    public SteamVR_Controller.Device LDevice;
+    public SteamVR_Controller.Device RDevice;
 
     protected Controller MissingControllers;
 
