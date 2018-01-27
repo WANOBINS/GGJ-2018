@@ -52,7 +52,7 @@ public class StevePlayerController : MonoBehaviour {
 
     void Grab()
     {
-        if (VRIM.LDevice.GetPressDown(EVRButtonId.k_EButton_Grip))
+        if (LeftTouch.gripped == true)
         {
             L_Grab = true;
             RaycastHit[] hits;
@@ -77,10 +77,10 @@ public class StevePlayerController : MonoBehaviour {
                 LGrabbedObject.transform.parent = L_Hand.transform;
 
             }
-            Debug.Log("Grab");
-        }
+            Debug.Log("Left Grab");
+        } 
 
-        if (VRIM.RDevice.GetPressDown(EVRButtonId.k_EButton_Grip))
+        if (RightTouch.gripped == true)
         {
             R_Grab = true;
             RaycastHit[] hits;
@@ -105,10 +105,10 @@ public class StevePlayerController : MonoBehaviour {
                 RGrabbedObject.transform.parent = R_Hand.transform;
 
             }
-            Debug.Log("Grab");
+            Debug.Log("Right Grab");
         }
 
-        if (VRIM.RDevice.GetPressUp(EVRButtonId.k_EButton_Grip) && R_Grab == true)
+        if (LeftTouch.gripped == false && L_Grab == true)
         {
             L_Grab = false;
 
@@ -122,10 +122,10 @@ public class StevePlayerController : MonoBehaviour {
                     
 
             
-            Debug.Log("Let go");
+            Debug.Log("Left Let go");
         }
 
-        if (VRIM.RDevice.GetPressUp(EVRButtonId.k_EButton_Grip) && R_Grab == true)
+        if (RightTouch.gripped == false && R_Grab == true)
         {
             R_Grab = false;
 
@@ -138,7 +138,7 @@ public class StevePlayerController : MonoBehaviour {
             }
 
             
-            Debug.Log("Let go");
+            Debug.Log("Right Let go");
         }
     }
 
