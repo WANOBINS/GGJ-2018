@@ -11,6 +11,9 @@ public class StevePlayerController : MonoBehaviour {
     public GameObject R_Hand;
     public VRInputManager VRIM;
 
+    public SteamVR_TrackedController RightTouch;
+    public SteamVR_TrackedController LeftTouch;
+
     public bool L_Grab;
     public bool R_Grab;
 
@@ -26,10 +29,9 @@ public class StevePlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        L_Hand = GameObject.FindGameObjectWithTag("Left");
-        R_Hand = GameObject.FindGameObjectWithTag("Right");
 
-        VRIM = GetComponent<VRInputManager>();
+        RightTouch = GameObject.FindGameObjectWithTag("RController").GetComponent<SteamVR_TrackedController>();
+        LeftTouch = GameObject.FindGameObjectWithTag("LController").GetComponent<SteamVR_TrackedController>();
 
         L_Grab = false;
         R_Grab = false;
@@ -37,8 +39,8 @@ public class StevePlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * 0.01f;
-        var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * 0.01f;
+        var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * .1f;
+        var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * .1f;
         transform.Translate(x, 0, y);
 
         Grab();
@@ -106,7 +108,7 @@ public class StevePlayerController : MonoBehaviour {
             Debug.Log("Grab");
         }
 
-        if (VRIM.LDevice.GetPressUp(EVRButtonId.k_EButton_Grip) && L_Grab == true)
+        if (VRIM.RDevice.GetPressUp(EVRButtonId.k_EButton_Grip) && R_Grab == true)
         {
             L_Grab = false;
 
