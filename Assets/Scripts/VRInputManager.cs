@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[OneInScene]
 public class VRInputManager : MonoBehaviour
 {
     #region Variables
