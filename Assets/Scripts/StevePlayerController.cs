@@ -30,8 +30,8 @@ public class StevePlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        RightTouch = GameObject.FindGameObjectWithTag("RController").GetComponent<SteamVR_TrackedController>();
-        LeftTouch = GameObject.FindGameObjectWithTag("LController").GetComponent<SteamVR_TrackedController>();
+        //RightTouch = GameObject.FindGameObjectWithTag("RController").GetComponent<SteamVR_TrackedController>();
+        //LeftTouch = GameObject.FindGameObjectWithTag("LController").GetComponent<SteamVR_TrackedController>();
 
         L_Grab = false;
         R_Grab = false;
