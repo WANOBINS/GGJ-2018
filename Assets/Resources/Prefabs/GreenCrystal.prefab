@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23278425076718134}
   - component: {fileID: 64148313619874388}
   - component: {fileID: 108022196723510694}
+  - component: {fileID: 114019431483176550}
+  - component: {fileID: 54973713204433062}
   m_Layer: 0
   m_Name: GreenCrystal
   m_TagString: Untagged
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1306310649531542}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 101.1, z: 0}
+  m_LocalPosition: {x: 0, y: 101.1, z: 13.5}
   m_LocalScale: {x: 0.1274635, y: 0.2252674, z: 0.1274635}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3a0b6cf06c67c4c4aaedae413bd25721, type: 2}
+  - {fileID: 2100000, guid: 303c94ed09f6c7547be0036ce5d7c267, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,6 +86,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1306310649531542}
   m_Mesh: {fileID: 4300000, guid: 1e81812d0b36aae49bc0dd9355d72737, type: 3}
+--- !u!54 &54973713204433062
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306310649531542}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!64 &64148313619874388
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -134,3 +151,15 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114019431483176550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306310649531542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfefe67a56981a49bdd9b097dd1d84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractorPlanet: {fileID: 0}
