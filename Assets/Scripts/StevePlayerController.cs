@@ -47,6 +47,11 @@ public class StevePlayerController : MonoBehaviour {
         var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * .1f;
         var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * .1f;
         transform.Translate(x, 0, transform.forward.z * y);
+        
+        if(Input.GetAxis("Oculus_GearVR_RThumbstickX") > 1)
+        {
+            transform.rotation = new Quaternion(transform.rotation.w, transform.rotation.x, transform.rotation.y + 20, transform.rotation.z);
+        }
 
         //Jacks
         if (LGrabbedObject != null)

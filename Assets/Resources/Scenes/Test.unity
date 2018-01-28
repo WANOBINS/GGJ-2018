@@ -112,39 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &45179204
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &430416131
 Prefab:
   m_ObjectHideFlags: 0
@@ -310,65 +277,55 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.4820161
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalPosition.y
       value: 52.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4316970731507956, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+    - target: {fileID: 4600386201398182, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 23882459091042160, guid: 0c4dd9c4654ce8e42aa885698844d378,
+    - target: {fileID: 23965181656810376, guid: 53e7b5f5d010aea43921639c0ebe5f02,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 45179204}
-    - target: {fileID: 33992931511747452, guid: 0c4dd9c4654ce8e42aa885698844d378,
+      objectReference: {fileID: 1859711142}
+    - target: {fileID: 33487198088380954, guid: 53e7b5f5d010aea43921639c0ebe5f02,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1577292594}
-    - target: {fileID: 114269919843527688, guid: 0c4dd9c4654ce8e42aa885698844d378,
+      objectReference: {fileID: 1469962860}
+    - target: {fileID: 114952330332856454, guid: 53e7b5f5d010aea43921639c0ebe5f02,
         type: 2}
       propertyPath: attractorPlanet
       value: 
       objectReference: {fileID: 1805368995}
-    - target: {fileID: 114557649588957806, guid: 0c4dd9c4654ce8e42aa885698844d378,
-        type: 2}
-      propertyPath: LControllerObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114557649588957806, guid: 0c4dd9c4654ce8e42aa885698844d378,
-        type: 2}
-      propertyPath: RControllerObject
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0c4dd9c4654ce8e42aa885698844d378, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 53e7b5f5d010aea43921639c0ebe5f02, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1265477342
 Prefab:
@@ -416,7 +373,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d929736a02f70e34bbacc9e11460c4a5, type: 2}
   m_IsPrefabParent: 0
---- !u!43 &1577292594
+--- !u!43 &1469962860
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -634,6 +591,39 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1805368993}
   m_Script: {fileID: 11500000, guid: 305b74365b5705448b7fd70168d62d00, type: 3}
+--- !u!21 &1859711142
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2041026203
 GameObject:
   m_ObjectHideFlags: 0
