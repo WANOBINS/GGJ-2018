@@ -6,6 +6,11 @@ TagManager:
   tags:
   - WristCom
   - reciever
+  - LController
+  - RController
+  - GCrystal
+  - Right
+  - Left
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Grab
   - 
   - 
   - 
