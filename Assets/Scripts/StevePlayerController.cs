@@ -139,7 +139,7 @@ public class StevePlayerController : MonoBehaviour {
                 LGrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
                 LGrabbedObject = null;
 
-                Reciver();//Jacks
+                Reciever();//Jacks
             }
                     
 
@@ -157,7 +157,7 @@ public class StevePlayerController : MonoBehaviour {
                 RGrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
                 RGrabbedObject = null;
 
-                Reciver();//Jacks
+                Reciever();//Jacks
             }
 
             
@@ -168,12 +168,12 @@ public class StevePlayerController : MonoBehaviour {
     #endregion GrabAndThrow
 
     //Jacks
-    #region Reciver 
-    void Reciver()
+    #region Reciever 
+    void Reciever()
     {
         if (LGrabbedObject != null)
         {
-            if (LGrabbedObject.tag == "reciver" && LeftTouch.triggerPressed)
+            if (LGrabbedObject.tag == "reciever" && LeftTouch.triggerPressed)
             {
                 My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
 
@@ -182,7 +182,7 @@ public class StevePlayerController : MonoBehaviour {
                     My_colliders[i].enabled = true;
                 }
             }
-            else if (RGrabbedObject.tag == "reciver" && RightTouch.triggerPressed)
+            else if (RGrabbedObject.tag == "reciever" && RightTouch.triggerPressed)
             {
                 My_colliders = RGrabbedObject.GetComponents<CapsuleCollider>();
                 for (int i = 0; i < My_colliders.Length; i++)
@@ -194,5 +194,5 @@ public class StevePlayerController : MonoBehaviour {
 
     }
 
-    #endregion Reciver
+    #endregion Reciever
 }
