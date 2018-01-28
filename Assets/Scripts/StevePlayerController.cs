@@ -22,6 +22,10 @@ public class StevePlayerController : MonoBehaviour {
     public float GrabRadius;
     public LayerMask grabMask;
 
+    //reciver variables
+    CapsuleCollider[] My_colliders;
+    //public GameObject reciver;
+    
 
     #endregion Variables
 
@@ -42,9 +46,20 @@ public class StevePlayerController : MonoBehaviour {
         var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * .1f;
         var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * .1f;
         transform.Translate(x, 0, y);
+                
+        //Jacks
+        if((LGrabbedObject.tag != "reciver" || (LGrabbedObject.tag == "reciver" && !LeftTouch.triggerPressed)) && (RGrabbedObject.tag != "reciver" || (RGrabbedObject.tag == "reciver" && !RightTouch.triggerPressed)))
+        {
+            My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
+
+            for (int i = 0; i < My_colliders.Length; i++)
+            {
+                My_colliders[i].enabled = false;
+            }
+        }
 
         Grab();
-	}
+    }
 
     #endregion StartAndUpdate
 
@@ -79,6 +94,8 @@ public class StevePlayerController : MonoBehaviour {
             }
             Debug.Log("Left Grab");
         } 
+        else
+
 
         if (RightTouch.gripped == true)
         {
@@ -117,7 +134,8 @@ public class StevePlayerController : MonoBehaviour {
                 LGrabbedObject.transform.parent = null;
                 LGrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
                 LGrabbedObject = null;
-                
+
+                Reciver();//Jacks
             }
                     
 
@@ -135,6 +153,7 @@ public class StevePlayerController : MonoBehaviour {
                 RGrabbedObject.GetComponent<Rigidbody>().isKinematic = false;
                 RGrabbedObject = null;
 
+                Reciver();//Jacks
             }
 
             
@@ -144,4 +163,29 @@ public class StevePlayerController : MonoBehaviour {
 
     #endregion GrabAndThrow
 
+    //Jacks
+    #region Reciver 
+    void Reciver()
+    {
+        if (LGrabbedObject.tag == "reciver" && LeftTouch.triggerPressed)
+        {
+            My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
+
+            for (int i = 0; i < My_colliders.Length; i++)
+            {
+                My_colliders[i].enabled = true;
+            }
+        }
+        else if(RGrabbedObject.tag == "reciver" && RightTouch.triggerPressed)
+        {
+            My_colliders = RGrabbedObject.GetComponents<CapsuleCollider>();
+            for (int i = 0; i < My_colliders.Length; i++)
+            {
+                My_colliders[i].enabled = true;
+            }
+        }
+
+    }
+
+    #endregion Reciver
 }
