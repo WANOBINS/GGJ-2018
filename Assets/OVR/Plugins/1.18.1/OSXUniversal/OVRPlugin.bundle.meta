@@ -1,8 +1,8 @@
 fileFormatVersion: 2
 guid: 0e24230acbdc7ed4eae65bd534a7b29a
 folderAsset: yes
-timeCreated: 1505508875
-licenseType: Store
+timeCreated: 1517111802
+licenseType: Free
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -11,6 +11,19 @@ PluginImporter:
   isPreloaded: 0
   isOverridable: 0
   platformData:
+  - first:
+      '': Editor
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+        OS: OSX
+  - first:
+      Android: Android
+    second:
+      enabled: 0
+      settings:
+        CPU: ARMv7
   - first:
       Any: 
     second:
@@ -21,7 +34,9 @@ PluginImporter:
     second:
       enabled: 1
       settings:
+        CPU: AnyCPU
         DefaultValueInitialized: true
+        OS: OSX
   - first:
       Standalone: OSXIntel
     second:

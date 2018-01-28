@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 780338727a4eff24e8a8b3c0a64da7b1
-timeCreated: 1505508875
-licenseType: Store
+timeCreated: 1517111801
+licenseType: Free
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -14,7 +14,8 @@ PluginImporter:
       Android: Android
     second:
       enabled: 1
-      settings: {}
+      settings:
+        CPU: ARMv7
   - first:
       Any: 
     second:
