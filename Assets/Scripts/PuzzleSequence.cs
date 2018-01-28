@@ -36,12 +36,18 @@ public class PuzzleSequence : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update ()
-    {
-		
+    { 
+		//SBButt.GetComponent<Collider>
 	}
+
+   /* public PuzzleSequence PSq;
+    PSq = FindObjectOfType<PuzzleSequence>();*/
 
     private void OnTriggerEnter(Collider Hand)
     {
-        
+        if(Hand.tag == "Left"|| Hand.tag == "Right")
+        {
+            
+        }
     }
 }
