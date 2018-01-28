@@ -46,15 +46,18 @@ public class StevePlayerController : MonoBehaviour {
         var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * .1f;
         var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * .1f;
         transform.Translate(x, 0, y);
-                
-        //Jacks
-        if((LGrabbedObject.tag != "reciver" || (LGrabbedObject.tag == "reciver" && !LeftTouch.triggerPressed)) && (RGrabbedObject.tag != "reciver" || (RGrabbedObject.tag == "reciver" && !RightTouch.triggerPressed)))
-        {
-            My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
 
-            for (int i = 0; i < My_colliders.Length; i++)
+        //Jacks
+        if (LGrabbedObject != null || RGrabbedObject != null)
+        {
+            if ((LGrabbedObject.tag != "reciver" || (LGrabbedObject.tag == "reciver" && !LeftTouch.triggerPressed)) && (RGrabbedObject.tag != "reciver" || (RGrabbedObject.tag == "reciver" && !RightTouch.triggerPressed)))
             {
-                My_colliders[i].enabled = false;
+                My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
+
+                for (int i = 0; i < My_colliders.Length; i++)
+                {
+                    My_colliders[i].enabled = false;
+                }
             }
         }
 
