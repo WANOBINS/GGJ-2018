@@ -9,6 +9,7 @@ public class StevePlayerController : MonoBehaviour {
 
     public GameObject L_Hand;
     public GameObject R_Hand;
+    public GameObject Move;
     public VRInputManager VRIM;
 
     public SteamVR_TrackedController RightTouch;
@@ -45,12 +46,12 @@ public class StevePlayerController : MonoBehaviour {
 	void Update () {
         var x = Input.GetAxis("Oculus_GearVR_LThumbstickX") * .1f;
         var y = Input.GetAxis("Oculus_GearVR_LThumbstickY") * .1f;
-        transform.Translate(x, 0, y);
+        transform.Translate(x, 0, transform.forward.z * y);
 
         //Jacks
-        if (LGrabbedObject != null || RGrabbedObject != null)
+        if (LGrabbedObject != null)
         {
-            if ((LGrabbedObject.tag != "reciver" || (LGrabbedObject.tag == "reciver" && !LeftTouch.triggerPressed)) && (RGrabbedObject.tag != "reciver" || (RGrabbedObject.tag == "reciver" && !RightTouch.triggerPressed)))
+            if ((LGrabbedObject.tag != "reciver" || (LGrabbedObject.tag == "reciver" && !LeftTouch.triggerPressed)))
             {
                 My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
 
@@ -170,21 +171,24 @@ public class StevePlayerController : MonoBehaviour {
     #region Reciver 
     void Reciver()
     {
-        if (LGrabbedObject.tag == "reciver" && LeftTouch.triggerPressed)
+        if (LGrabbedObject != null)
         {
-            My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
+            if (LGrabbedObject.tag == "reciver" && LeftTouch.triggerPressed)
+            {
+                My_colliders = LGrabbedObject.GetComponents<CapsuleCollider>();
 
-            for (int i = 0; i < My_colliders.Length; i++)
-            {
-                My_colliders[i].enabled = true;
+                for (int i = 0; i < My_colliders.Length; i++)
+                {
+                    My_colliders[i].enabled = true;
+                }
             }
-        }
-        else if(RGrabbedObject.tag == "reciver" && RightTouch.triggerPressed)
-        {
-            My_colliders = RGrabbedObject.GetComponents<CapsuleCollider>();
-            for (int i = 0; i < My_colliders.Length; i++)
+            else if (RGrabbedObject.tag == "reciver" && RightTouch.triggerPressed)
             {
-                My_colliders[i].enabled = true;
+                My_colliders = RGrabbedObject.GetComponents<CapsuleCollider>();
+                for (int i = 0; i < My_colliders.Length; i++)
+                {
+                    My_colliders[i].enabled = true;
+                }
             }
         }
 
