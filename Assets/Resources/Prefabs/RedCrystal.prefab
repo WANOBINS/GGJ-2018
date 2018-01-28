@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 23377044188730766}
   - component: {fileID: 64920116950936928}
   - component: {fileID: 108257220091864560}
+  - component: {fileID: 114926267819036324}
+  - component: {fileID: 54665023502269116}
   m_Layer: 0
   m_Name: RedCrystal
   m_TagString: Untagged
@@ -37,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273184078725596}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 101.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 101.1}
   m_LocalScale: {x: 0.1274635, y: 0.2252674, z: 0.1274635}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: a57f38a00458bb24884f8ccad0a5cd30, type: 2}
+  - {fileID: 2100000, guid: c68391f454fe8334fb5a85161ea964c4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,6 +86,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273184078725596}
   m_Mesh: {fileID: 4300000, guid: 1e81812d0b36aae49bc0dd9355d72737, type: 3}
+--- !u!54 &54665023502269116
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273184078725596}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!64 &64920116950936928
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -134,3 +151,15 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114926267819036324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273184078725596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfefe67a56981a49bdd9b097dd1d84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractorPlanet: {fileID: 0}
