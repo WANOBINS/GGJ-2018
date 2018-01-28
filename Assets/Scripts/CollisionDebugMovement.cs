@@ -134,7 +134,7 @@ public class CollisionDebugMovement : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         if (!rigidbody)
         {
-            Debug.LogError("CollisionDebigMovement requires a Rigidbody to work!");
+            Debug.LogError("CollisionDebugMovement requires a Rigidbody to work!");
         }
         rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
